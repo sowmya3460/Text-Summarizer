@@ -1,0 +1,10 @@
+Flask
+pandas
+numpy
+scikit-learn
+nltk
+sumy
+fuzzywuzzy
+python-Levenshtein
+joblib
+networkx

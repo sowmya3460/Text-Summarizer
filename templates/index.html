@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Summarizer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>AI Text Summarizer</h1>
+
+            <p class="subtitle">
+                Enter a paragraph and generate a concise summary
+            </p>
+
+            <form method="POST">
+
+                <div class="input-section">
+
+                    <textarea
+                        name="paragraph"
+                        placeholder="Enter your paragraph here..."
+                        required>{{ request.form.get('paragraph', '') }}</textarea>
+
+                    <button type="submit">
+                        Summarize
+                    </button>
+
+                </div>
+
+            </form>
+
+            {% if summary %}
+
+            <!-- Stats Cards -->
+
+            <div class="stats-container">
+
+                <div class="stat-card">
+                    <h3>{{ original_count }}</h3>
+                    <p>Original Words</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>{{ summary_count }}</h3>
+                    <p>Summary Words</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>{{ score }}%</h3>
+                    <p>Accuracy</p>
+                </div>
+
+            </div>
+
+            <!-- Summary Section -->
+
+            <div class="output-section">
+
+                <h2>Summarized Text</h2>
+
+                <div class="summary-box">
+                    {{ summary }}
+                </div>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
