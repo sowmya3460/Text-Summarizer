@@ -20,7 +20,7 @@ A Flask-based web application that performs **text summarization using NLP and S
 - HTML, CSS
 
 
-## 🧠 Example
+## 🧠 Example Output
 <img width="1530" height="776" alt="image" src="https://github.com/user-attachments/assets/a0c8384f-9290-44b4-912a-2cf952e1b436" />
 <img width="1520" height="816" alt="image" src="https://github.com/user-attachments/assets/ace144f4-5e2b-4362-815a-4076c160d169" />
 
